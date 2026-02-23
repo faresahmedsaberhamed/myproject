@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="الشرقية الخضراء – منصة تعريفية بمشروعات التكنولوجيا الخضراء والطاقة المتجددة في محافظة الشرقية، مصر. استكشف الابتكارات المستدامة.">
+  <meta name="keywords" content="التكنولوجيا الخضراء, الشرقية, طاقة شمسية, طاقة رياح, تدوير المخلفات, مصر, تنمية مستدامة">
+  <meta name="author" content="فارس">
+  <meta property="og:title" content="الشرقية الخضراء | مبادرات التكنولوجيا المستدامة">
+  <meta property="og:description" content="جولة تعريفية بأبرز مشروعات الطاقة النظيفة والاستدامة في محافظة الشرقية.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>الشرقية الخضراء | مبادرات التكنولوجيا المستدامة</title>
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Leaflet map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glass-container">
+    <!-- Floating icons -->
+    <i class="fas fa-solar-panel floating-icon icon1"></i>
+    <i class="fas fa-wind floating-icon icon2"></i>
+    <i class="fas fa-recycle floating-icon icon3"></i>
+    <i class="fas fa-leaf floating-icon icon4"></i>
+    <i class="fas fa-water floating-icon icon5"></i>
+    <i class="fas fa-tree floating-icon icon6"></i>
+
+    <!-- Header with toggle and language -->
+    <div class="header-controls">
+      <div>
+        <h1 class="header-title"><i class="fas fa-leaf" style="margin-left: 10px; color: var(--icon-color);"></i>
+          <span class="lang-ar">الشرقية الخضراء</span>
+          <span class="lang-en">Green Sharqia</span>
+        </h1>
+        <div class="badge-container">
+          <span class="badge-light pulse-badge"><i class="far fa-calendar-alt"></i> <span class="lang-ar">مبادرة مستدامة 2025</span><span class="lang-en">Sustainable 2025</span></span>
+          <span class="badge-light"><i class="fas fa-wind"></i> <span class="lang-ar">طاقة رياح · شمس</span><span class="lang-en">Wind · Solar</span></span>
+          <span class="badge-light"><i class="fas fa-recycle"></i> <span class="lang-ar">اقتصاد دائري</span><span class="lang-en">Circular economy</span></span>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="lang-toggle" id="langToggle">
+          <i class="fas fa-globe"></i>
+          <span class="lang-ar">English</span>
+          <span class="lang-en">العربية</span>
+        </div>
+        <div class="theme-toggle" id="themeToggle">
+          <i class="fas fa-sun" id="themeIcon"></i>
+          <span class="lang-ar">الوضع الليلي</span>
+          <span class="lang-en">Night mode</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub header -->
+    <div class="sub-header">
+      <i class="fas fa-solar-panel"></i>
+      <span class="lang-ar">التكنولوجيا الخضراء في محافظة الشرقية: ريادة في الطاقة النظيفة والاستدامة</span>
+      <span class="lang-en">Green Technology in Sharqia: Leading clean energy & sustainability</span>
+    </div>
+
+    <!-- Expanded definition section -->
+    <div class="detailed-section">
+      <div class="definition-flex">
+        <div class="definition-text">
+          <h2 class="section-title">
+            <span class="lang-ar">ما هي التكنولوجيا الخضراء؟</span>
+            <span class="lang-en">What is Green Technology?</span>
+          </h2>
+          <p class="paragraph-large">
+            <span class="lang-ar">التكنولوجيا الخضراء هي مجموعة من الابتكارات والحلول التقنية التي تهدف إلى حماية البيئة، تقليل البصمة الكربونية، وتحسين الاستدامة. تشمل مجالات متعددة مثل الطاقة المتجددة (الشمسية والرياح)، إعادة التدوير، المباني الخضراء، وسائل النقل النظيفة، وإدارة الموارد. مصر أطلقت العديد من المشروعات القومية العملاقة في هذا المجال، ومحافظة الشرقية تلعب دورًا محوريًا من خلال مشروعات الرياح في الزعفرانة، الطاقة الشمسية في الصالحية، ومصنع تدوير المخلفات في بلبيس، بالإضافة إلى مشروعات معالجة المياه والنقل الكهربائي.</span>
+            <span class="lang-en">Green technology comprises innovations and technical solutions aimed at protecting the environment, reducing carbon footprint, and enhancing sustainability. It covers multiple fields such as renewable energy (solar & wind), recycling, green buildings, clean transportation, and resource management. Egypt has launched numerous major national projects in this field, and Sharqia governorate plays a pivotal role through wind projects in Zafarana, solar energy in El Salheya, the recycling plant in Bilbeis, in addition to water treatment and electric transport projects.</span>
+          </p>
+        </div>
+        <div class="benefits-card">
+          <div class="benefits-inner">
+            <h3 class="benefits-title">
+              <span class="lang-ar">فوائد التكنولوجيا الخضراء</span>
+              <span class="lang-en">Benefits</span>
+            </h3>
+            <ul class="bullet-list">
+              <li><i class="fas fa-check-circle"></i> <span class="lang-ar">خفض الانبعاثات الكربونية</span><span class="lang-en">Lower carbon emissions</span></li>
+              <li><i class="fas fa-check-circle"></i> <span class="lang-ar">استدامة الموارد الطبيعية</span><span class="lang-en">Sustainable resources</span></li>
+              <li><i class="fas fa-check-circle"></i> <span class="lang-ar">توفير الطاقة وخفض التكاليف</span><span class="lang-en">Energy savings</span></li>
+              <li><i class="fas fa-check-circle"></i> <span class="lang-ar">خلق فرص عمل خضراء</span><span class="lang-en">Green jobs</span></li>
+              <li><i class="fas fa-check-circle"></i> <span class="lang-ar">تحسين جودة الهواء والمياه</span><span class="lang-en">Cleaner air & water</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- quick stats -->
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="stat-number">+٨</div>
+        <div class="stat-label lang-ar">محطات طاقة متجددة</div>
+        <div class="stat-label lang-en">Renewable plants</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">~١٢٠٠</div>
+        <div class="stat-label lang-ar">ميجاواط قدرة نظيفة</div>
+        <div class="stat-label lang-en">MW clean capacity</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">١٥</div>
+        <div class="stat-label lang-ar">مشروع أخضر قيد التنفيذ</div>
+        <div class="stat-label lang-en">Green projects</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">٦</div>
+        <div class="stat-label lang-ar">محطات معالجة مياه</div>
+        <div class="stat-label lang-en">Water treatment</div>
+      </div>
+    </div>
+
+    <!-- project cards -->
+    <h2 class="section-title-large">
+      <span class="lang-ar">أبرز المشروعات الخضراء في الشرقية</span>
+      <span class="lang-en">Key Green Projects in Sharqia</span>
+    </h2>
+    <div class="achievement-grid" id="projectGrid">
+      <!-- Cards will be generated by JS -->
+    </div>
+
+    <!-- interactive map -->
+    <h2 class="section-title-with-icon"><i class="fas fa-map-marked-alt"></i> 
+      <span class="lang-ar">خريطة المشروعات الخضراء بالشرقية</span>
+      <span class="lang-en">Green Projects Map - Sharqia</span>
+    </h2>
+    <div id="sharqiaMap" class="map-container"></div>
+    <div class="chips-container" id="chipsContainer">
+      <!-- Chips will be generated by JS -->
+    </div>
+
+    <!-- Additional detailed section: challenges & future -->
+    <div class="detailed-section">
+      <h2 class="section-title">
+        <span class="lang-ar">التحديات والفرص المستقبلية</span>
+        <span class="lang-en">Challenges & Future Opportunities</span>
+      </h2>
+      <div class="challenges-grid">
+        <div>
+          <h3 class="subsection-title"><i class="fas fa-exclamation-triangle" style="color: var(--icon-color);"></i> <span class="lang-ar">التحديات</span><span class="lang-en">Challenges</span></h3>
+          <ul class="bullet-list" id="challengesList">
+            <!-- JS will populate -->
+          </ul>
+        </div>
+        <div>
+          <h3 class="subsection-title"><i class="fas fa-rocket" style="color: var(--icon-color);"></i> <span class="lang-ar">الفرص</span><span class="lang-en">Opportunities</span></h3>
+          <ul class="bullet-list" id="opportunitiesList">
+            <!-- JS will populate -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- sustainability goals -->
+    <div class="sustainability-section">
+      <h2 class="section-title">
+        <span class="lang-ar">أهداف التنمية المستدامة المرتبطة</span>
+        <span class="lang-en">Related Sustainable Development Goals</span>
+      </h2>
+      <div class="sdg-grid" id="sdgGrid">
+        <!-- JS will populate -->
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer-note">
+      <i class="fas fa-code-branch"></i>
+      <span class="lang-ar">صمم بواسطة <strong>فارس</strong> · جميع المحتويات تعبر عن مشروعات محافظة الشرقية في التكنولوجيا الخضراء</span>
+      <span class="lang-en">Designed by <strong>Fares</strong> · Content reflects Sharqia green projects</span>
+      <i class="fas fa-map-pin"></i>
+    </div>
+  </div>
+
+  <!-- Leaflet map script -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- External JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
